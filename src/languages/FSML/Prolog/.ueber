@@ -1,0 +1,16 @@
+[
+  macro(eglSyntax(fsml)),
+  macro(eslSyntax(fsml)),
+  language(fsml(ok(term))),
+  membership(fsml(ok(term)), okFsm, []),
+  elementOf('../sample.term', fsml(ok(term))),
+  elementOf('sample.input', term),
+  elementOf('sample.output', term),
+  mapsTo(simulateFsm, ['../sample.term', 'sample.input'], ['sample.output']),
+  mapsTo(acceptFsm, ['../sample.term', 'sample.input'], []),
+  mapsTo(statesOfFsm, ['../sample.term'], ['generated/State.java']),
+  mapsTo(inputsOfFsm, ['../sample.term'], ['generated/Input.java']),
+  mapsTo(actionsOfFsm, ['../sample.term'], ['generated/Action.java']),
+  mapsTo(stepperOfFsm, ['../sample.term'], ['generated/Stepper.java'])
+
+].

@@ -1,0 +1,16 @@
+type signature = decl* ;
+symbol type : sort x typeexpr -> decl ;
+symbol symbol : fsym x typeexpr* x sort -> decl ;
+symbol term : -> typeexpr ; 
+symbol atom : -> typeexpr ; 
+symbol integer : -> typeexpr ; 
+symbol float : -> typeexpr ; 
+symbol number : -> typeexpr ; 
+symbol boolean : -> typeexpr ; 
+symbol sort : sort -> typeexpr ; 
+symbol star : typeexpr -> typeexpr ; 
+symbol plus : typeexpr -> typeexpr ; 
+symbol option : typeexpr -> typeexpr ; 
+symbol tuple : typeexpr* -> typeexpr ; 
+type sort = atom ;
+type fsym = atom ;

@@ -1,0 +1,4 @@
+type signature = profile* ;
+type profile = (fsym, sort*, sort) ;
+type fsym = atom ;
+type sort = atom ;
